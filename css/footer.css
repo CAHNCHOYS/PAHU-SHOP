@@ -1,0 +1,215 @@
+._ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+._ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.footer {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #181817;
+}
+
+.footer__body {
+  position: relative;
+}
+
+.footer__all-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 22.6890756303% 23.5294117647% 31.0924369748%;
+  grid-template-columns: 22.6890756303% 23.5294117647% 31.0924369748%;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 60px;
+}
+
+.top-footer-item {
+  padding: 8px 25px;
+  position: relative;
+}
+
+.top-footer-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  opacity: 0.6;
+  z-index: 1;
+  background-color: #fece76;
+  height: 100%;
+}
+
+.top-footer-item__title {
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #ffce76;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.top-footer-item__info {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.top-footer-item__link {
+  color: inherit;
+  font-size: inherit;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.bottom-item__logo {
+  margin: 0px 0px 30px 0px;
+}
+
+.bottom-item__logo a {
+  display: block;
+  width: 100%;
+}
+
+.bottom-item__logo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: auto;
+}
+
+.bottom-item__social-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 10px;
+}
+
+.bottom-item__social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 42px;
+  height: 42px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.bottom-item__social-link::before {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: white;
+  font-size: 24px;
+}
+
+.bottom-item__title {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.bottom-item__text {
+  opacity: 0.5;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+@media (max-width: 1190px) {
+  .footer {
+    padding-top: calc(40px + 30 * ((100vw - 320px) / (870)));
+  }
+
+  .footer {
+    padding-bottom: calc(40px + 30 * ((100vw - 320px) / (870)));
+  }
+
+  .footer__all-items {
+    row-gap: calc(30px + 30 * ((100vw - 320px) / (870)));
+  }
+
+  .top-footer-item__title {
+    font-size: calc(20px + 5 * ((100vw - 320px) / (870)));
+  }
+
+  .bottom-item__title {
+    font-size: calc(24px + 6 * ((100vw - 320px) / (870)));
+  }
+}
+
+@media (max-width: 800px) {
+  .footer__all-items {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto auto;
+    grid-template-rows: auto auto auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer__all-items {
+    display: block;
+  }
+
+  .footer__all-items > div:not(:last-child) {
+    margin: 0px 0px 20px 0px;
+  }
+}
+
+@media (any-hover: hover) {
+  .top-footer-item__link:hover {
+    color: #fece76;
+  }
+
+  .bottom-item__social-link:hover {
+    border-color: #fece76;
+  }
+
+  .bottom-item__social-link:hover::before {
+    color: #fece76;
+  }
+}
